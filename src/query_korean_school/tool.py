@@ -270,7 +270,7 @@ class QueryScheduleSchema(BaseModel):
     )
 
 
-class QueryKoreanSchoolTool(BaseTool):
+class QueryKoreanSchool(BaseTool):
     """CrewAI custom tool for querying Korean school schedules via NEIS."""
 
     name: str = "query_schedule_tool"
@@ -314,7 +314,7 @@ class QueryKoreanSchoolTool(BaseTool):
 
 
 # Backward/Convenience export: instantiate the tool so external code can import and use directly
-query_schedule_tool = QueryKoreanSchoolTool()
+query_schedule_tool = QueryKoreanSchool()
 
 # timetable_info = get_school_timetable("은빛초등학교", '20251001', '20251030', grade=[1,2,3], target_org="경기도교육청")
 # print(timetable_info)
